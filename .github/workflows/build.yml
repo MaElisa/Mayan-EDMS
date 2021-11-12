@@ -16,10 +16,22 @@ jobs:
       run: make docker-build
     - name: Run tests
       run: make docker-runtest-all
-    - name: whitespace-linter
+    - name: Python Linter
       # You may pin to the exact commit or the version.
-      # uses: nosborn/github-action-whitespace-linter@69f42c0502dd4466cfec11f11c7d2c5a71ce93ee
-      uses: nosborn/github-action-whitespace-linter@v1
+      # uses: sunnysid3up/python-linter@93076bd8f740f062069291d738fc70c1b4171c1d
+      uses: sunnysid3up/python-linter@v0.1-beta.7
       with:
-        # files, directories, or globs
-        files: .
+        # Source file or directory
+        source: . # optional, default is .
+        # Set strictness for lint [low, medium, high]
+        strict: # optional, default is medium
+        # Mypy options
+        mypy-options: # optional, default is 
+        # Pylint options
+        pylint-options: # optional, default is 
+        # Black options
+        black-options: # optional, default is 
+        # Isort options
+        isort-options: # optional, default is 
+        # Confirm if source is a Django project
+        django: # optional
