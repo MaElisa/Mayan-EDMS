@@ -22,4 +22,4 @@ jobs:
       uses: nosborn/github-action-whitespace-linter@v1
       with:
         # files, directories, or globs
-        files: ./
+        files: .
