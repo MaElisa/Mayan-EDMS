@@ -16,3 +16,10 @@ jobs:
       run: make docker-build
     - name: Run tests
       run: make docker-runtest-all
+    - name: whitespace-linter
+      # You may pin to the exact commit or the version.
+      # uses: nosborn/github-action-whitespace-linter@69f42c0502dd4466cfec11f11c7d2c5a71ce93ee
+      uses: nosborn/github-action-whitespace-linter@v1
+      with:
+        # files, directories, or globs
+        files: ./
